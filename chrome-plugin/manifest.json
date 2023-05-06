@@ -1,0 +1,10 @@
+{
+    "name": "Odoo cash drawer",
+    "version": "0.0.1",
+    "description": "allow to open the cash drawer without printing receipt https://github.com/Gabriel-Desharnais/odoo-cashdrawer",
+    "manifest_version": 3,
+    "author": "Gabriel Desharnais",
+    "action":{
+        "default_title": "Odoo chash drawer"
+    }
+}
