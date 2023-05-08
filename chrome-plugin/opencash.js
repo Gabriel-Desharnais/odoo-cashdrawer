@@ -12,6 +12,7 @@ function onBuild(e){
     }
 }
 var cashdrawerclosed = true;
+var openDrawerUrl = "http://127.0.0.1:4242";
 function onUpdate(e){
     pay = document.getElementsByClassName("payment-screen screen");
     if (pay.length == 1){
@@ -21,7 +22,7 @@ function onUpdate(e){
                 paymentType = paymentline[0].getElementsByClassName("payment-name")[0]
                 if (paymentType.textContent == "Cash"){
                     cashdrawerclosed = false;
-                    console.log("heyo");
+                    opendrawer();
                     return
                 }
             }
@@ -30,7 +31,7 @@ function onUpdate(e){
                 paymentType = paymentline[i].getElementsByClassName("payment-name")[0]
                 if (paymentType.textContent == "Cash"){
                     cashdrawerclosed = false;
-                    console.log("heyo");
+                    opendrawer();
                     return
                 }
             }
@@ -42,6 +43,12 @@ function onUpdate(e){
         cashdrawerclosed  = true;
     }
     //pos = 
+}
+function opendrawer(){
+    var xmlHttp = new XMLHttpRequest();
+    xmlHttp.open( "GET", openDrawerUrl, false );
+    xmlHttp.send( null );
+    console.log("open drawer");
 }
 /*for (let i = 0; i<20; i++){
     console.log("jjke");
