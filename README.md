@@ -3,3 +3,8 @@ This repo aims to allow users of hosted odoo pos solution to allow the cash draw
 ## How it work
 1. Install the plugin in the chrome browser
 2. Install the local client on the computer and add it has a service
+
+### To run flask
+```bash
+flask --app drawerDeamon run -p 4242
+```
